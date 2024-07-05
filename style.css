@@ -1,3 +1,17 @@
+:root {
+  --clr-accent: 158, 36%, 37%;
+  --clr-bg: 30, 38%, 92%;
+  --clr-primary: 212, 21%, 14%;
+  --clr-secondary: 228, 12%, 48%;
+  --clr-white: 0, 0%, 100%;
+
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-fraunces: "Fraunces", serif;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
 *,
 *::before,
 *::after {
