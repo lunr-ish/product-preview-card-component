@@ -12,6 +12,8 @@
   --fw-bold: 700;
 }
 
+/* RESET */
+
 *,
 *::before,
 *::after {
@@ -39,4 +41,16 @@ p,
 h1,
 h2 {
   overflow-wrap: break-word;
+}
+
+/* UTILITIES */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
