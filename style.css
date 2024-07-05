@@ -1,5 +1,6 @@
 :root {
   --clr-accent: 158, 36%, 37%;
+  --clr-accent-dark: 158, 36%, 20%;
   --clr-bg: 30, 38%, 92%;
   --clr-primary: 212, 21%, 14%;
   --clr-secondary: 228, 12%, 48%;
@@ -53,4 +54,102 @@ h2 {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+/* BASE */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-medium);
+  font-size: 0.875rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--clr-bg));
+  color: hsl(var(--clr-secondary));
+}
+
+.product-card {
+  max-width: 37.5rem;
+  background: hsl(var(--clr-white));
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.1);
+}
+
+.product-card__content {
+  padding: 1.5rem;
+}
+
+.product-card__category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+}
+
+.product-card__title {
+  font-family: var(--ff-fraunces);
+  line-height: 1;
+  font-size: 2rem;
+  margin-block: 0.75rem 1rem;
+  color: hsl(var(--clr-primary));
+}
+
+.product-card__description {
+  line-height: 1.65;
+}
+
+.product-card__price {
+  margin-block: 1.3rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.product-card__price > :first-child {
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  color: hsl(var(--clr-accent));
+}
+
+.product-card__cta {
+  width: 100%;
+  padding: 0.9375rem;
+  background: hsl(var(--clr-accent));
+  color: hsl(var(--clr-white));
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0.5rem;
+  transition-duration: 200ms;
+}
+
+.product-card__cta:is(:hover, :focus-visible) {
+  background: hsl(var(--clr-accent-dark));
+}
+
+@media (min-width: 40rem) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-card__content {
+    padding: 2rem;
+  }
+
+  .product-card__title {
+    margin-block: 1.25rem 1.5rem;
+  }
+
+  .product-card__price {
+    margin-block: 1.6rem;
+  }
 }
