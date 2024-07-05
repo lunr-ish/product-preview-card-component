@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
